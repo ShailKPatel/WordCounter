@@ -1,2 +1,14 @@
-# WordCounter
-Web-based text analysis tool built with Streamlit
+# Word & Character Counter
+
+A simple Streamlit app that takes text input and shows:
+- Word count
+- Character count
+- Number of alphabets
+- Number of digits
+- Number of spaces
+- Number of special characters
+
+## Run Locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py

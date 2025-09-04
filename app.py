@@ -2,7 +2,6 @@ import streamlit as st
 import string
 import re
 from collections import Counter
-import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Advanced Text Analyzer", layout="wide")
 
@@ -85,28 +84,5 @@ if st.button("Analyze Text"):
                 st.write(f"{word} : {freq}")
         else:
             st.write("No words found.")
-
-        # Word frequency bar chart
-        if most_common:
-            st.subheader("📈 Word Frequency Distribution")
-            words, freqs = zip(*most_common)
-            fig, ax = plt.subplots()
-            ax.bar(words, freqs)
-            ax.set_ylabel("Frequency")
-            ax.set_xlabel("Words")
-            ax.set_title("Top 10 Most Common Words")
-            st.pyplot(fig)
-
-        # Character frequency chart
-        st.subheader("🔡 Character Frequency Distribution")
-        char_freq = Counter(c.lower() for c in text if c.isalpha())
-        if char_freq:
-            chars, freqs = zip(*char_freq.most_common())
-            fig2, ax2 = plt.subplots()
-            ax2.bar(chars, freqs)
-            ax2.set_ylabel("Frequency")
-            ax2.set_xlabel("Characters")
-            ax2.set_title("Character Frequency")
-            st.pyplot(fig2)
     else:
         st.warning("Please enter some text to analyze.")
