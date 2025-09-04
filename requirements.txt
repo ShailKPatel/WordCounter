@@ -1,15 +1,2 @@
-streamlit
-# Word & Character Counter
-
-A simple Streamlit app that takes text input and shows:
-- Word count
-- Character count
-- Number of alphabets
-- Number of digits
-- Number of spaces
-- Number of special characters
-
-## Run Locally
-```bash
-pip install -r requirements.txt
-streamlit run app.py
+matplotlib==3.10.5
+streamlit==1.49.1
